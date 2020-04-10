@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <afukuhar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/09 14:20:58 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/10 17:13:11 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/10 13:51:36 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/10 14:09:08 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	void	*src_c;
-	int		len_c;
+	const unsigned char *src;
 
-	if (!dst && !src)
-		return (NULL);
-	src_c = ft_memchr(src, c, n);
-	if (src_c != NULL)
+	src = s;
+	while (n--)
 	{
-		len_c = src_c - src + 1;
-		ft_memmove(dst, src, len_c);
-		return (dst + len_c);
+		if (*src == (unsigned char)c)
+			return ((void *)src);
+		src++;
 	}
-	ft_memmove(dst, src, n);
 	return (NULL);
 }
