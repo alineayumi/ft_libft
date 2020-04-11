@@ -6,7 +6,7 @@
 /*   By: alineayumi <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 13:11:28 by alineayum         #+#    #+#             */
-/*   Updated: 2020/04/11 00:37:54 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/11 01:03:45 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,18 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 /*
+** --- CHARACTER CLASSIFICATION FUNCTIONS ---
+*/
+int 	ft_isalpha(int c);
+/*
 ** ------------------------ PART 2 - ADDITIONAL FUNCTIONS ---------------------
 **
 ** --- MEMORY FUNCTIONS ---
 */
 void	*ft_memcpy_rev(void *restrict dst, const void *restrict src, size_t n);
-
+/*
+** --- CHARACTER CLASSIFICATION FUNCTIONS ---
+*/
+int		ft_isupper(int c);
+int		ft_islower(int c);
 #endif
