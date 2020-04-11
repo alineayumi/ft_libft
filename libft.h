@@ -6,7 +6,7 @@
 /*   By: alineayumi <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 13:11:28 by alineayum         #+#    #+#             */
-/*   Updated: 2020/04/11 03:24:41 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/11 17:14:51 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+/*
+** --- STRING MANIPULATION FUNCTIONS ---
+*/
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
+	size_t dstsize);
 /*
 ** --- CHARACTER CLASSIFICATION FUNCTIONS ---
 */
