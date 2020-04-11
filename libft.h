@@ -6,7 +6,7 @@
 /*   By: alineayumi <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 13:11:28 by alineayum         #+#    #+#             */
-/*   Updated: 2020/04/10 21:48:57 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/11 00:37:54 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 /*
 ** ------------------------ PART 2 - ADDITIONAL FUNCTIONS ---------------------
 **
