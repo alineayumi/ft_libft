@@ -6,7 +6,7 @@
 /*   By: alineayumi <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 13:11:28 by alineayum         #+#    #+#             */
-/*   Updated: 2020/04/11 17:14:51 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/12 17:47:15 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 */
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 	size_t dstsize);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src,
+	size_t dstsize);
 /*
 ** --- CHARACTER CLASSIFICATION FUNCTIONS ---
 */
@@ -52,6 +54,10 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 /*
+** --- NUMERIC CONVERSION FUNCTIONS ---
+*/
+int		ft_atoi(const char *str);
+/*
 ** ------------------------ PART 2 - ADDITIONAL FUNCTIONS ---------------------
 **
 ** --- MEMORY FUNCTIONS ---
@@ -62,4 +68,9 @@ void	*ft_memcpy_rev(void *restrict dst, const void *restrict src, size_t n);
 */
 int		ft_isupper(int c);
 int		ft_islower(int c);
+int		ft_isspace(int c);
+/*
+** --- NUMERIC CONVERSION FUNCTIONS ---
+*/
+int		ft_atoi_base(const char *str, int base);
 #endif
