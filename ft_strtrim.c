@@ -6,7 +6,7 @@
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 22:39:59 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/13 00:01:47 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/13 00:14:34 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	if (!*set)
-	{
-		str = ft_substr(s1, 0, ft_strlen(s1));
-		return (str);
-	}
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[start]))
