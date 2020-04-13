@@ -6,7 +6,7 @@
 /*   By: alineayumi <marvin@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 13:11:28 by alineayum         #+#    #+#             */
-/*   Updated: 2020/04/12 21:01:48 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/12 22:42:01 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src,
 void	*ft_memmove(void *dst, const void *src, size_t count);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_calloc(size_t count, size_t size);
 /*
 ** --- STRING EXAMINATION FUNCTIONS ---
 */
@@ -44,10 +45,11 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
 	size_t dstsize);
 size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 	size_t dstsize);
+char	*ft_strdup(const char *s1);
 /*
 ** --- CHARACTER CLASSIFICATION FUNCTIONS ---
 */
-int 	ft_isalpha(int c);
+int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
@@ -74,4 +76,10 @@ int		ft_isspace(int c);
 ** --- NUMERIC CONVERSION FUNCTIONS ---
 */
 int		ft_atoi_base(const char *str, int base);
+/*
+** --- STRING MANIPULATION FUNCTIONS ---
+*/
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*strtrim(char const *s1, char const *set);
 #endif

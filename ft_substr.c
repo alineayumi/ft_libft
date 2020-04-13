@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/10 21:13:38 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/12 21:40:57 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/12 21:50:20 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/12 21:57:15 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	while (n && *s1 == *s2 && *s1 && *s2)
-	{
-		n--;
-		s1++;
-		s2++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	char *str;
+
+	if (!(str = malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	s += start;
+	ft_strlcpy(str, s, len + 1);
+	return (str);
 }
