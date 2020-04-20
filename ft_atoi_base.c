@@ -6,21 +6,21 @@
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 23:22:46 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/12 17:08:46 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/17 11:12:25 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isvalid(char c, int base)
+static int	ft_isvalid(char c, int base)
 {
 	if (base <= 10)
-		return (c >= '0' && c <= '0' + base);
+		return (c >= '0' && c <= '0' + base - 1);
 	return (ft_isdigit(c) || (c >= 'a' && c <= 'a' + base - 11) ||
 		(c >= 'A' && c <= 'A' + base - 11));
 }
 
-int	ft_atoi_base(const char *str, int base)
+int			ft_atoi_base(const char *str, int base)
 {
 	int			signal;
 	long int	nbr;

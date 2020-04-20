@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/10 21:13:38 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/17 00:12:00 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/17 15:34:35 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/20 14:32:24 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	if (n == 0)
-		return (0);
-	while (n > 1 && *s1 == *s2 && *s1 && *s2)
-	{
-		n--;
-		s1++;
-		s2++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	char	*ptr;
+	size_t	l1;
+	size_t	l2;
+
+	l1 = ft_strlen(s1);
+	l2 = ft_strlen(s2);
+	ptr = s1 + l1;
+	ft_strncpy(ptr, s2, n < l2 ? n : l2);
+	ft_bzero(ptr + (n < l2 ? n : l2), 1);
+	return (s1);
 }

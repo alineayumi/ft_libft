@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_numdig.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/10 21:13:38 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/17 00:12:00 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/14 21:38:58 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/14 21:44:09 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_numdig(int n, int base)
 {
+	int len;
+
+	len = (n < 0) ? 1 : 0;
 	if (n == 0)
-		return (0);
-	while (n > 1 && *s1 == *s2 && *s1 && *s2)
+		return (1);
+	while (n != 0)
 	{
-		n--;
-		s1++;
-		s2++;
+		n = n / base;
+		len++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (len);
 }

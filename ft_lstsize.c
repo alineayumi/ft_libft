@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/10 21:13:38 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/17 00:12:00 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/15 19:49:45 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/15 19:49:47 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	if (n == 0)
+	int len;
+
+	if (!lst)
 		return (0);
-	while (n > 1 && *s1 == *s2 && *s1 && *s2)
+	len = 1;
+	while (lst->next)
 	{
-		n--;
-		s1++;
-		s2++;
+		lst = lst->next;
+		len++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (len);
 }

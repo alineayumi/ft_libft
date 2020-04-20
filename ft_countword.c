@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_countword.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/10 21:13:38 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/17 00:12:00 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/15 19:46:06 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/15 19:46:10 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_countword(char const *s, char c)
 {
-	if (n == 0)
+	size_t	count;
+
+	if (!*s)
 		return (0);
-	while (n > 1 && *s1 == *s2 && *s1 && *s2)
+	count = 0;
+	while (*s)
 	{
-		n--;
-		s1++;
-		s2++;
+		while (*s == c)
+			s++;
+		if (*s)
+			count++;
+		while (*s != c && *s)
+			s++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (count);
 }

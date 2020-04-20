@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/10 21:13:38 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/17 00:12:00 by afukuhar         ###   ########.fr       */
+/*   Created: 2020/04/16 10:56:15 by afukuhar          #+#    #+#             */
+/*   Updated: 2020/04/16 18:53:59 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (n == 0)
-		return (0);
-	while (n > 1 && *s1 == *s2 && *s1 && *s2)
+	t_list	*new_lst;
+	t_list	*tmp;
+
+	if (!lst || !(tmp = ft_lstnew(f(lst->content))))
+		return (NULL);
+	new_lst = tmp;
+	while (lst->next)
 	{
-		n--;
-		s1++;
-		s2++;
+		lst = lst->next;
+		if (!(tmp = ft_lstnew(f(lst->content))))
+			return (NULL);
+		ft_lstadd_back(&new_lst, tmp);
+		tmp = tmp->next;
+		if (tmp)
+			ft_lstdelone(tmp, del);
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (new_lst);
 }
