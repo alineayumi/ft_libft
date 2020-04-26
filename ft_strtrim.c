@@ -6,7 +6,7 @@
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/12 22:39:59 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/15 19:57:19 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/25 17:06:37 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (ft_strchr(set, s1[start]))
+	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
 	if (start > end)
 		return (ft_strdup(s1 + end + 1));
-	while (ft_strchr(set, s1[end]))
+	while (ft_strchr(set, s1[end]) && end >= 0)
 		end--;
 	if (!(str = malloc(sizeof(char) * (end - start + 2))))
 		return (NULL);

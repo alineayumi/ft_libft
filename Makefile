@@ -6,7 +6,7 @@
 #    By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/16 10:52:40 by afukuhar          #+#    #+#              #
-#    Updated: 2020/04/20 14:54:06 by afukuhar         ###   ########.fr        #
+#    Updated: 2020/04/26 16:18:08 by afukuhar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,10 @@ ft_toupper.c ft_isdigit.c ft_putchar.c ft_strlcat.c ft_islower.c ft_putchar_fd.c
 ft_strlcpy.c ft_isprint.c ft_putendl.c ft_strlen.c ft_isspace.c ft_putendl_fd.c \
 ft_strmap.c ft_strcat.c ft_strcpy.c ft_strncpy.c ft_strncat.c ft_strcmp.c \
 ft_strclr.c ft_memdel.c ft_memalloc.c ft_strnew.c ft_strdel.c ft_striter.c \
-ft_striteri.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strstr.c ft_strsplit.c \
-ft_lstdel.c ft_lstadd.c
+ft_striteri.c ft_strequ.c ft_strnequ.c ft_strstr.c
 
 SRCS_BONUS=ft_lstadd_back.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
-ft_lstsize.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c ft_lstnew.c
+ft_lstsize.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c ft_lstnew.c 
 
 OBJECTS=ft_atoi.o ft_isupper.o ft_memccpy.o ft_putnbr.o ft_strmapi.o \
 ft_atoi_base.o ft_itoa.o ft_memchr.o ft_putnbr_fd.o ft_strncmp.o ft_bzero.o \
@@ -38,11 +37,10 @@ ft_toupper.o ft_isdigit.o ft_putchar.o ft_strlcat.o ft_islower.o ft_putchar_fd.o
 ft_strlcpy.o ft_isprint.o ft_putendl.o ft_strlen.o ft_isspace.o ft_putendl_fd.o \
 ft_strmap.o ft_strcat.o ft_strcpy.o ft_strncpy.o ft_strncat.o ft_strcmp.o \
 ft_strclr.o ft_memdel.o ft_memalloc.o ft_strnew.o ft_strdel.o ft_striter.o \
-ft_striteri.o ft_strequ.o ft_strnequ.o ft_strsub.o ft_strstr.o ft_strsplit.o \
-ft_lstdel.o ft_lstadd.o
+ft_striteri.o ft_strequ.o ft_strnequ.o ft_strstr.o
 
 OBJECTS_BONUS=ft_lstadd_back.o ft_lstclear.o ft_lstiter.o ft_lstmap.o \
-ft_lstsize.o ft_lstadd_front.o ft_lstdelone.o ft_lstlast.o ft_lstnew.o
+ft_lstsize.o ft_lstadd_front.o ft_lstdelone.o ft_lstlast.o ft_lstnew.o 
 
 all:	$(NAME)
 

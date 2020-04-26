@@ -6,12 +6,11 @@
 /*   By: afukuhar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 14:15:12 by afukuhar          #+#    #+#             */
-/*   Updated: 2020/04/20 13:11:16 by afukuhar         ###   ########.fr       */
+/*   Updated: 2020/04/24 13:04:27 by afukuhar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
